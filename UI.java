@@ -11,7 +11,7 @@ class UI extends Application{
 	  public static void main(String[] args) 
 	    {
 	        Application.launch(args);
-	        //Shape_1 shape1 = ShapeFactory.getShape("Rectangle");
+	
 
 	    }
 
@@ -27,13 +27,28 @@ class UI extends Application{
 	         
 	        // Get the graphics context of the canvas
 	        GraphicsContext gc = canvas.getGraphicsContext2D();
-	        Shape_1 shape2=new Rectangle();
-            
-	        shape2.draw(gc);
-		  
-		  
+            	        	        
+	        Shape shape1= new Rectangle();
+	        shape1.draw(gc);
+	        // Create the Pane
+	        Pane root = new Pane();
+	        // Set the Style-properties of the Pane
+	        root.setStyle("-fx-padding: 10;" +
+	                "-fx-border-style: solid inside;" +
+	                "-fx-border-width: 2;" +
+	                "-fx-border-insets: 5;" +
+	                "-fx-border-radius: 5;" +
+	                "-fx-border-color: blue;");
+	        // Add the Canvas to the Pane
+	        root.getChildren().add(canvas);
+	        // Create the Scene
+	        Scene scene = new Scene(root);
+	        // Add the Scene to the Stage
+	        stage.setScene(scene);
+	        // Set the Title of the Stage
+	        stage.setTitle("Drawing Basic Shapes on a Canvas");
+	        // Display the Stage
+	        stage.show(); 
 	    }
-	  
-	  
-
 }
+	 
