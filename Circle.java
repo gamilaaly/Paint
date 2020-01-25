@@ -55,10 +55,17 @@ public class Circle extends Shape_1 {
 	@Override
 	public void setColor(Color c) {
 		this.color = c;
+		//checking
+		System.out.println("Color has changed");
 	}
 
 	@Override
 	public Color getColor() {
 		return color;
+	}
+
+
+    public void accept(ModifyingVisitorImp visitor)  {
+		visitor.visit(this,color);
 	}
 }
