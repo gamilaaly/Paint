@@ -1,5 +1,6 @@
 import java.awt.Graphics;
-
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 
 public class Circle extends Shape_1 {
 	public Circle() {
@@ -48,9 +49,8 @@ public class Circle extends Shape_1 {
 	}
 
 	@Override
-	public void draw(Graphics g) {
-		g.drawOval(getX(), getY(), getWidth(), getHeight());
-		g.setColor(this.colour);
+	public void draw(GraphicsContext g) {
+		
 		System.out.println("Inside Circle::draw() method.");
 	}
 

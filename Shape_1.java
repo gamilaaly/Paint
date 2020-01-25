@@ -4,9 +4,8 @@ import javafx.scene.canvas.*;
 import javafx.scene.canvas.*;
 
 public abstract class Shape_1 implements Cloneable {
-	
 	protected String type;
-	abstract void draw(Graphics g);
+	abstract void draw(GraphicsContext g);
 	abstract void setColor(java.awt.Color c);
 	abstract java.awt.Color getColor();
 	abstract void accept (ModifyingVisitorImp visitor);

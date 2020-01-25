@@ -1,4 +1,6 @@
 import java.awt.Graphics;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 // Same exact functions as rectangle but with making height = width, make the GUI take take 1 parameter to be more realistic
 public class Square extends Shape_1 {
 	public Square() {
@@ -44,8 +46,8 @@ public class Square extends Shape_1 {
 	}
 
 	@Override
-	public void draw(Graphics g) {
-		g.drawRect(getX(), getY(), getWidth(), getHeight());
+	public void draw(GraphicsContext g) {
+	
 		System.out.println("Inside Square::draw() method");
 	}
 

@@ -1,4 +1,7 @@
 import java.awt.Graphics;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+
 
 public class Rectangle extends Shape_1 {
 	private java.awt.Color color;
@@ -44,8 +47,8 @@ public class Rectangle extends Shape_1 {
 	}
 
 	@Override
-	public void draw(Graphics g) {
-		g.drawRect(getX(), getY(), getWidth(), getHeight());
+	public void draw(GraphicsContext g) {
+		g.fillRect(getX(), getY(), getWidth(), getHeight());
 		System.out.println("Inside Rectangle::draw() method.");
 	}
 
