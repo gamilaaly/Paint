@@ -3,7 +3,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 
 
-public class Rectangle extends Shape_1 {
+public class Rectangle extends Shape {
 	private java.awt.Color color;
 	private int x;
 	private int y;

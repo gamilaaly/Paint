@@ -3,7 +3,7 @@ import javafx.scene.canvas.Canvas;
 
 
 import javafx.scene.canvas.GraphicsContext;
-public class Line extends Shape_1 {
+public class Line extends Shape {
 	public Line() {
 		type="Line";
 	}

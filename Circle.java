@@ -2,7 +2,7 @@ import java.awt.Graphics;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 
-public class Circle extends Shape_1 {
+public class Circle extends Shape {
 	public Circle() {
 		//Checking purposes
 		type="Circle";
