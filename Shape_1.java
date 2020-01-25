@@ -6,7 +6,7 @@ public abstract class Shape_1 implements Cloneable {
 	abstract void draw(Graphics g);
 	abstract void setColor(java.awt.Color c);
 	abstract java.awt.Color getColor();
-	
+	abstract void accept (ModifyingVisitorImp visitor);
 	
 	public String getType(){
 	return type;
