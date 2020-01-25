@@ -58,6 +58,8 @@ public class Square extends Shape_1 {
 	public java.awt.Color getColor() {
 		return color;
 	}
-
+	public void accept(ModifyingVisitorImp visitor)  {
+		visitor.visit(this,this.color);
+	}
 }
 

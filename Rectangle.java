@@ -58,4 +58,7 @@ public class Rectangle extends Shape_1 {
 	public java.awt.Color getColor() {
 		return this.color;
 	}
+	public void accept(ModifyingVisitorImp visitor)  {
+		visitor.visit(this,this.color);
+	}
 }
