@@ -4,7 +4,7 @@ public class Line extends Shape_1 {
 public Line() {
 type="Line";
 }
-private Color color;
+private java.awt.Color color;
 private int x1;
 private int y1;
 private int x2;
@@ -49,12 +49,12 @@ public void draw(Graphics g) {
 }
 
 @Override
-public void setColor(Color c) {
+public void setColor(java.awt.Color c) {
 	this.color = c;
 }
 
 @Override
-public Color getColor() {
+public java.awt.Color getColor() {
 	return color;
 }
 

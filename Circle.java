@@ -1,5 +1,6 @@
 import java.awt.Graphics;
 
+
 public class Circle extends Shape_1 {
 	public Circle() {
 		//Checking purposes
@@ -10,7 +11,7 @@ public class Circle extends Shape_1 {
 	private int y;
 	private int height;
 	private int width;
-	private Color color;
+	private java.awt.Color colour;
 
 
 	// Should get the x input value somehow from the GUI
@@ -49,23 +50,24 @@ public class Circle extends Shape_1 {
 	@Override
 	public void draw(Graphics g) {
 		g.drawOval(getX(), getY(), getWidth(), getHeight());
+		g.setColor(this.colour);
 		System.out.println("Inside Circle::draw() method.");
 	}
 
-	@Override
-	public void setColor(Color c) {
-		this.color = c;
+	
+	public void setColor(java.awt.Color c) {
+		this.colour = c;
 		//checking
 		System.out.println("Color has changed");
 	}
 
-	@Override
-	public Color getColor() {
-		return color;
+
+	public java.awt.Color getColor() {
+		return colour;
 	}
 
 
-    public void accept(ModifyingVisitorImp visitor)  {
-		visitor.visit(this,color);
+	public void accept(ModifyingVisitorImp visitor)  {
+		visitor.visit(this,this.colour);
 	}
 }

@@ -4,7 +4,7 @@ public class Square extends Shape_1 {
 	public Square() {
 	type="Square";	
 	}
-	private Color color;
+	private java.awt.Color color;
 	private int x;
 	private int y;
 	private int height;
@@ -50,12 +50,12 @@ public class Square extends Shape_1 {
 	}
 
 	@Override
-	public void setColor(Color c) {
+	public void setColor(java.awt.Color c) {
 		this.color =c;
 	}
 
 	@Override
-	public Color getColor() {
+	public java.awt.Color getColor() {
 		return color;
 	}
 
