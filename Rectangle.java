@@ -6,7 +6,10 @@ public class Rectangle extends Shape_1 {
 	private int y;
 	private int height;
 	private int width;
-
+	
+	public Rectangle() {
+		type="Rectangle";
+	}
 	// Should get the x input value somehow from the GUI
 	public void setX(int InX) {
 		this.x = InX;

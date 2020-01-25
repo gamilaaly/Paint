@@ -2,13 +2,16 @@ import java.awt.Graphics;
 
 public class Circle extends Shape_1 {
 	public Circle() {
-	};
+		//Checking purposes
+		type="Circle";
+	}
 
 	private int x;
 	private int y;
 	private int height;
 	private int width;
 	private Color color;
+
 
 	// Should get the x input value somehow from the GUI
 	public void setX(int InX) {
