@@ -1,6 +1,6 @@
 import java.awt.Graphics;
 // Same exact functions as rectangle but with making height = width, make the GUI take take 1 parameter to be more realistic
-public class Square implements Shape {
+public class Square extends Shape_1 {
 	public Square() {};
 	private Color color;
 	private int x;

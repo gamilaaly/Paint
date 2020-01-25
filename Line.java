@@ -1,6 +1,7 @@
 import java.awt.Graphics;
+import java.awt.Color;
 
-public class Line implements Shape {
+public class Line extends Shape_1 {
 	public Line() {
 	};
 
@@ -52,12 +53,13 @@ public class Line implements Shape {
 	}
 
 	@Override
-	public void setColor(Color c) {
-		this.color = c;
+	public void setColor(Color c){
+		 this.color=c;
 	}
 
 	@Override
 	public Color getColor() {
 		return color;
 	}
-}
+
+	}

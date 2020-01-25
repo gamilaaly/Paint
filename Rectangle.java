@@ -1,6 +1,6 @@
 import java.awt.Graphics;
 
-public class Rectangle extends Color implements Shape {
+public class Rectangle extends Shape_1 {
 	private Color color;
 	private int x;
 	private int y;
