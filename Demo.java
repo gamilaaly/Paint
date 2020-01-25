@@ -11,8 +11,10 @@ public class Demo {
 		shape1.setColor(java.awt.Color.black);
 		System.out.println(shape1.getColor());
 		ModifyingVisitorImp Visitor=new ModifyingVisitorImp();
-		Visitor.visit(shape1,java.awt.Color.WHITE);
+		Visitor.visit(shape1,java.awt.Color.RED);
+		//shape1.accept(Visitor);
 		System.out.println(shape1.getColor());
+
 
 	}
 }

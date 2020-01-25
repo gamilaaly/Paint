@@ -1,5 +1,8 @@
 import java.awt.Graphics;
 
+import javafx.scene.canvas.*;
+import javafx.scene.canvas.*;
+
 public abstract class Shape_1 implements Cloneable {
 	
 	protected String type;
