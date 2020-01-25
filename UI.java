@@ -10,6 +10,8 @@ class UI extends Application{
 	  public static void main(String[] args) 
 	    {
 	        Application.launch(args);
+	        //Shape_1 shape1 = ShapeFactory.getShape("Rectangle");
+
 	    }
 
 	  @Override
@@ -24,9 +26,9 @@ class UI extends Application{
 	         
 	        // Get the graphics context of the canvas
 	        GraphicsContext gc = canvas.getGraphicsContext2D();
-	        
-	        Shape_1 shape1 = shapeFactory.getShape("Rectangle");
-	        
+	        Shape_1 shape2=new Rectangle();
+            
+	        shape2.draw(gc);
 		  
 		  
 	    }
