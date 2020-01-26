@@ -1,6 +1,8 @@
 package paint;
 
 
+import java.util.ArrayList;
+
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
@@ -10,6 +12,16 @@ public class Rectangle extends Shape {
 	private int y;
 	private int height;
 	private int width;
+	private ArrayList<Integer> Dimensions;
+
+	    public void setDimensions(ArrayList<Integer> D) {
+			this.Dimensions=D;
+		}
+	    
+	    public ArrayList<Integer> getDimensions() {
+	    	return Dimensions;
+	    }
+	
 	
 	public Rectangle() {
 		type="Rectangle";

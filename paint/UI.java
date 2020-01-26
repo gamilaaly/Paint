@@ -31,9 +31,9 @@ public class UI extends Application {
 		Shape shape1 = ShapeFactory.getShape("LINE");
 	    //Triangle t=new Triangle();
 	    
-	   shape2.setDimensions(new ArrayList<Integer>( Arrays.asList(1,1,3,5,6)));
+	   shape2.setDimensions(new ArrayList<Integer>( Arrays.asList(90,190,10,30,170,170)));
 	    System.out.println(shape2.getDimensions());
-		
+		ArrayList<Integer> Dim=shape2.getDimensions();
 	    shape1.setDimensions(new ArrayList<Integer>( Arrays.asList(1,1,3)));
 	    System.out.println(shape1.getDimensions());
 		
@@ -43,7 +43,7 @@ public class UI extends Application {
 		
 		shape2.draw(gc, Color.BLUE);
 		ModifyingVisitorImp Visitor=new ModifyingVisitorImp();
-		Visitor.visit(shape2,Color.BLACK,gc);
+		//Visitor.visit(shape2,Color.BLACK,gc);
 		Shape shape3=(Shape)shape2.clone();
 	    shape3.draw(gc, Color.RED);
 	    
