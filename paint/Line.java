@@ -1,15 +1,13 @@
 package paint;
 
-import java.awt.Graphics;
-import javafx.scene.canvas.Canvas;
-
-
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
+
 public class Line extends Shape {
 	public Line() {
 		type="Line";
 	}
-	private java.awt.Color color;
+	private Color color;
 	private int x1;
 	private int y1;
 	private int x2;
@@ -47,25 +45,29 @@ public class Line extends Shape {
 		return y2;
 	}
 
+	@SuppressWarnings("exports")
 	@Override
-	public void draw(GraphicsContext g) {
-		//g.strokeLine(190, 50, 250, 75);
-
-		g.strokeLine(getX1(), getY1(), getX2(), getY2());
+	public void draw(GraphicsContext g, Color c) {
+		g.setFill(c);
+		g.strokeLine(190, 50, 250, 75);
+		//g.strokeLine(getX1(), getY1(), getX2(), getY2());
 		System.out.println("Inside Line::draw() method.");
 	}
 
+	@SuppressWarnings("exports")
 	@Override
-	public void setColor(java.awt.Color c) {
+	public void setColor(Color c) {
 		this.color = c;
+		System.out.println("color has changed");
 	}
 
+	@SuppressWarnings("exports")
 	@Override
-	public java.awt.Color getColor() {
+	public Color getColor() {
 		return color;
 	}
-
+/*
 	public void accept(ModifyingVisitorImp visitor)  {
 		visitor.visit(this,this.color);
-	}
+	}*/
 }

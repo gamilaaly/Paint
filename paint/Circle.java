@@ -1,9 +1,8 @@
 package paint;
 
-import java.awt.Graphics;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
 
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
 public class Circle extends Shape {
 	public Circle() {
 		//Checking purposes
@@ -14,7 +13,7 @@ public class Circle extends Shape {
 	private int y;
 	private int height;
 	private int width;
-	private java.awt.Color colour;
+	private Color colour;
 
 
 	// Should get the x input value somehow from the GUI
@@ -50,26 +49,30 @@ public class Circle extends Shape {
 		return height;
 	}
 
+	@SuppressWarnings("exports")
 	@Override
-	public void draw(GraphicsContext g) {
+	public void draw(GraphicsContext g, Color c) {
+		g.setFill(c);
 		g.fillOval(getX(), getY(), getHeight(), getWidth());
 		System.out.println("Inside Circle::draw() method.");
 	}
 
 	
-	public void setColor(java.awt.Color c) {
+	@SuppressWarnings("exports")
+	public void setColor(Color c) {
 		this.colour = c;
 		//checking
 		System.out.println("Color has changed");
 	}
 
 
-	public java.awt.Color getColor() {
+	@SuppressWarnings("exports")
+	public Color getColor() {
 		return colour;
 	}
-
+/*
    @Override
 	public void accept(ModifyingVisitorImp visitor)  {
 		visitor.visit(this,this.colour);
-	}
+	}*/
 }

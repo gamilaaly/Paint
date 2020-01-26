@@ -1,12 +1,11 @@
 package paint;
 
-import java.awt.Graphics;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
 
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
 
 public class Rectangle extends Shape {
-	private java.awt.Color color;
+	private Color color;
 	private int x;
 	private int y;
 	private int height;
@@ -48,22 +47,27 @@ public class Rectangle extends Shape {
 		return height;
 	}
 
+	@SuppressWarnings("exports")
 	@Override
-	public void draw(GraphicsContext g) {
+	public void draw(GraphicsContext g,Color c) {
+		g.setFill(c);
 		g.fillRect(getX(), getY(), getHeight(), getWidth());
 		System.out.println("Inside Rectangle::draw() method.");
 	}
 
+	@SuppressWarnings("exports")
 	@Override
-	public void setColor(java.awt.Color c) {
+	public void setColor(Color c) {
 		this.color = c;
 	}
 
+	@SuppressWarnings("exports")
 	@Override
-	public java.awt.Color getColor() {
+	public Color getColor() {
 		return this.color;
 	}
+	/*
 	public void accept(ModifyingVisitorImp visitor)  {
 		visitor.visit(this,this.color);
-	}
+	}*/
 }

@@ -1,11 +1,7 @@
 package paint;
 
 
-import javafx.scene.Scene;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage; 
+import javafx.scene.paint.Color;
 
 
 public class Demo {
@@ -27,10 +23,10 @@ public class Demo {
 		Shape shape2=(Shape) shape1.clone();
 		System.out.println(shape1.getType());
 		System.out.println(shape2.getType());
-		shape1.setColor(java.awt.Color.black);
+		shape1.setColor(Color.BLACK);
 		System.out.println(shape1.getColor());
 		ModifyingVisitorImp Visitor=new ModifyingVisitorImp();
-		Visitor.visit(shape1,java.awt.Color.RED);
+		//Visitor.visit(shape1,Color.RED,gc);
 		//shape1.accept(Visitor);
 		System.out.println(shape1.getColor());
 		//shape1.draw(gc);

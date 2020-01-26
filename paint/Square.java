@@ -1,14 +1,13 @@
 package paint;
 
-import java.awt.Graphics;
-import javafx.scene.canvas.Canvas;
+import javafx.scene.paint.Color;
 import javafx.scene.canvas.GraphicsContext;
 // Same exact functions as rectangle but with making height = width, make the GUI take take 1 parameter to be more realistic
 public class Square extends Shape {
 	public Square() {
 	type="Square";	
 	}
-	private java.awt.Color color;
+	private Color color;
 	private int x;
 	private int y;
 	private int height;
@@ -47,23 +46,29 @@ public class Square extends Shape {
 		return height;
 	}
 
+	@SuppressWarnings("exports")
 	@Override
-	public void draw(GraphicsContext g) {
+	public void draw(GraphicsContext g, Color c) {
+		g.setFill(c);
 		g.fillRect(getX(), getY(), getHeight(), getWidth());
 		System.out.println("Inside Square::draw() method");
 	}
 
+	@SuppressWarnings("exports")
 	@Override
-	public void setColor(java.awt.Color c) {
+	public void setColor(Color c) {
 		this.color =c;
 	}
 
+	@SuppressWarnings("exports")
 	@Override
-	public java.awt.Color getColor() {
+	public Color getColor() {
 		return color;
 	}
+	
+	/*
 	@Override
 	public void accept(ModifyingVisitorImp visitor)  {
 		visitor.visit(this,this.color);
-	}
+	}*/
 }

@@ -6,11 +6,12 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.scene.paint.Color;
+
 
 public class UI extends Application {
 	public static void main(String[] args) {
 		Application.launch(args);
-		// Shape shape1 = ShapeFactory.getShape("Rectangle");
 
 	}
 
@@ -22,15 +23,30 @@ public class UI extends Application {
 		canvas.setWidth(400);
 		// Set the height of the Canvas
 		canvas.setHeight(200);
-
+		
 		// Get the graphics context of the canvas
 		GraphicsContext gc = canvas.getGraphicsContext2D();
 		Shape shape2 = ShapeFactory.getShape("TRIANGLE");
 		Shape shape1 = ShapeFactory.getShape("LINE");
+	    Triangle t=new Triangle();
+	    
+	
 		
-		shape2.draw(gc);
-		shape1.draw(gc);
-
+	    
+		
+		
+	
+		shape2.setColor(Color.BLUE);
+		System.out.println(shape2.getColor());
+		
+		shape2.draw(gc, Color.BLUE);
+		ModifyingVisitorImp Visitor=new ModifyingVisitorImp();
+		Visitor.visit(shape2,Color.BLACK,gc);
+		Shape shape3=(Shape)shape2.clone();
+	    shape3.draw(gc, Color.RED);
+	    
+		
+		
 		// Create the Pane
 		Pane root = new Pane();
 
