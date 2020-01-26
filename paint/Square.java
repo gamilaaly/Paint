@@ -27,7 +27,7 @@ public class Square extends Shape {
 		g.setFill(c);
 		
 		//g.fillRect(getX(), getY(), getHeight(), getWidth());
-		g.fillRect(Dimensions.get(0),Dimensions.get(1) , Dimensions.get(2), Dimensions.get(3));
+		g.fillRect(this.Dimensions.get(0),this.Dimensions.get(1) ,this.Dimensions.get(2), this.Dimensions.get(2));
 
 		System.out.println("Inside Square::draw() method");
 	}

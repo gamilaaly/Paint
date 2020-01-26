@@ -19,24 +19,34 @@ public class UI extends Application {
 	@Override
 	public void start(Stage stage) {
 		// Create the Canvas
-		Canvas canvas = new Canvas(400, 200);
+		Canvas canvas = new Canvas(400, 400);
 		// Set the width of the Canvas
 		canvas.setWidth(400);
 		// Set the height of the Canvas
-		canvas.setHeight(200);
+		canvas.setHeight(400);
 		
-		// Get the graphics context of the canvas
+		// Get the graphics context of the canva
 		GraphicsContext gc = canvas.getGraphicsContext2D();
 		Shape shape2 = ShapeFactory.getShape("TRIANGLE");
 		Shape shape1 = ShapeFactory.getShape("LINE");
-	    //Triangle t=new Triangle();
-	    
-	   shape2.setDimensions(new ArrayList<Integer>( Arrays.asList(90,190,10,30,170,170)));
-	    System.out.println(shape2.getDimensions());
-		ArrayList<Integer> Dim=shape2.getDimensions();
-	    shape1.setDimensions(new ArrayList<Integer>( Arrays.asList(1,1,3)));
-	    System.out.println(shape1.getDimensions());
+		Shape square=ShapeFactory.getShape("SQUARE");
+	    Shape circle=ShapeFactory.getShape("CIRCLE");
+		Shape rectangle=ShapeFactory.getShape("RECTANGLE");
+
+		square.setDimensions(new ArrayList<Integer>(Arrays.asList(200,0,100)));
+		square.draw(gc, Color.AQUA);
 		
+		circle.setDimensions(new ArrayList<Integer>(Arrays.asList(50,250,100)));
+		circle.draw(gc, Color.CHOCOLATE);
+		
+		rectangle.setDimensions(new ArrayList<Integer>(Arrays.asList(200,200,100,70)));
+		rectangle.draw(gc, Color.BLACK);
+
+	    shape2.setDimensions(new ArrayList<Integer>( Arrays.asList(90,190,10,30,170,170)));
+	    System.out.println(shape2.getDimensions());
+	    shape1.setDimensions(new ArrayList<Integer>( Arrays.asList(350,50,350,300)));
+	    System.out.println(shape1.getDimensions());
+		shape1.draw(gc, Color.BLACK);
 	
 		shape2.setColor(Color.BLUE);
 		System.out.println(shape2.getColor());

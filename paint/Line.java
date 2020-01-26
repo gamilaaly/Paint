@@ -10,10 +10,7 @@ public class Line extends Shape {
 		type="Line";
 	}
 	private Color color;
-	private int x1;
-	private int y1;
-	private int x2;
-	private int y2;
+	
     private ArrayList<Integer> Dimensions;
 
 	    public void setDimensions(ArrayList<Integer> D) {
@@ -23,44 +20,14 @@ public class Line extends Shape {
 	    public ArrayList<Integer> getDimensions() {
 	    	return Dimensions;
 	    }
-	// Should get the x input value somehow from the GUI
-	public void setX1(int InX1) {
-		this.x1 = InX1;
-	}
-
-	public void setY1(int InY1) {
-		this.y1 = InY1;
-	}
-
-	public void setX2(int InX2) {
-		this.x2 = InX2;
-	}
-
-	public void setY2(int InY2) {
-		this.y2 = InY2;
-	}
-
-	public int getX1() {
-		return x1;
-	}
-
-	public int getY1() {
-		return y1;
-	}
-	public int getX2() {
-		return x2;
-	}
-
-	public int getY2() {
-		return y2;
-	}
 
 	@SuppressWarnings("exports")
 	@Override
 	public void draw(GraphicsContext g, Color c) {
 		g.setFill(c);
-		g.strokeLine(190, 50, 250, 75);
 		//g.strokeLine(getX1(), getY1(), getX2(), getY2());
+		g.strokeLine(this.Dimensions.get(0), this.Dimensions.get(1), this.Dimensions.get(2), this.Dimensions.get(3));
+
 		System.out.println("Inside Line::draw() method.");
 	}
 

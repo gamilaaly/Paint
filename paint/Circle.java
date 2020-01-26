@@ -11,10 +11,6 @@ public class Circle extends Shape {
 		type="Circle";
 	}
 
-	private int x;
-	private int y;
-	private int height;
-	private int width;
 	private Color colour;
 	private ArrayList<Integer> Dimensions;
 
@@ -26,45 +22,14 @@ public class Circle extends Shape {
 	    	return Dimensions;
 	    }
 
-	// Should get the x input value somehow from the GUI
-	public void setX(int InX) {
-		this.x = InX;
-	}
-
-	public void setY(int InY) {
-		this.y = InY;
-	}
-
-	public void setWidth(int InWidth) {
-		this.width = InWidth;
-	}
-
-	public void setHeight(int InHeight) {
-		this.height = InHeight;
-	}
-
-	public int getX() {
-		return x;
-	}
-
-	public int getY() {
-		return y;
-	}
-
-	public int getWidth() {
-		return width;
-	}
-
-	public int getHeight() {
-		return height;
-	}
+	
 
 	@SuppressWarnings("exports")
 	@Override
 	public void draw(GraphicsContext g, Color c) {
 		g.setFill(c);
-		g.fillOval(getX(), getY(), getHeight(), getWidth());
-		System.out.println("Inside Circle::draw() method.");
+		//g.fillOval(getX(), getY(), getHeight(), getWidth());
+	    g.fillOval(this.Dimensions.get(0),this.Dimensions.get(1),this.Dimensions.get(2),this.Dimensions.get(2));
 	}
 
 	
