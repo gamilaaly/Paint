@@ -1,5 +1,7 @@
 package paint;
 
+import java.util.ArrayList;
+
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
@@ -12,7 +14,15 @@ public class Line extends Shape {
 	private int y1;
 	private int x2;
 	private int y2;
+    private ArrayList<Integer> Dimensions;
 
+	    public void setDimensions(ArrayList<Integer> D) {
+			this.Dimensions=D;
+		}
+	    
+	    public ArrayList<Integer> getDimensions() {
+	    	return Dimensions;
+	    }
 	// Should get the x input value somehow from the GUI
 	public void setX1(int InX1) {
 		this.x1 = InX1;

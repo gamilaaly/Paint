@@ -7,8 +7,9 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.scene.paint.Color;
+import java.util.ArrayList;
 
-
+import java.util.*; 
 public class UI extends Application {
 	public static void main(String[] args) {
 		Application.launch(args);
@@ -28,12 +29,13 @@ public class UI extends Application {
 		GraphicsContext gc = canvas.getGraphicsContext2D();
 		Shape shape2 = ShapeFactory.getShape("TRIANGLE");
 		Shape shape1 = ShapeFactory.getShape("LINE");
-	    Triangle t=new Triangle();
+	    //Triangle t=new Triangle();
 	    
-	
+	   shape2.setDimensions(new ArrayList<Integer>( Arrays.asList(1,1,3,5,6)));
+	    System.out.println(shape2.getDimensions());
 		
-	    
-		
+	    shape1.setDimensions(new ArrayList<Integer>( Arrays.asList(1,1,3)));
+	    System.out.println(shape1.getDimensions());
 		
 	
 		shape2.setColor(Color.BLUE);

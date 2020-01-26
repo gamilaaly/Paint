@@ -1,5 +1,7 @@
 package paint;
 
+
+import java.util.ArrayList;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 public class Triangle extends Shape {
@@ -16,7 +18,16 @@ public class Triangle extends Shape {
 	private int y1;
 	private int y2;
 	private int y3;
+    private ArrayList<Integer> Dimensions;
 
+    public void setDimensions(ArrayList<Integer> D) {
+		this.Dimensions=D;
+	}
+    
+    public ArrayList<Integer> getDimensions() {
+    	return Dimensions;
+    }
+	
 	public void setX1(int X1)
 	{
 		this.x1 =X1;

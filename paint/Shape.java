@@ -1,6 +1,6 @@
 package paint;
 
-
+import java.util.ArrayList;
 import javafx.scene.paint.Color;
 import javafx.scene.canvas.*;
 
@@ -11,7 +11,9 @@ public abstract class Shape implements Cloneable {
 	abstract void setColor(Color c);
 	abstract Color getColor();
 	//abstract void accept (ModifyingVisitorImp visitor);
-	
+	//DIMENSIONS
+    abstract void setDimensions(ArrayList<Integer> Dimensions);
+	abstract ArrayList<Integer> getDimensions();
 	public String getType(){
 	return type;
 	}
