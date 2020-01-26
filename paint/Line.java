@@ -8,18 +8,22 @@ import javafx.scene.paint.Color;
 public class Line extends Shape {
 	public Line() {
 		type="Line";
+		Original=true;
+	}
+	public boolean isOriginal() {
+		return Original;	
 	}
 	private Color color;
-	
-    private ArrayList<Integer> Dimensions;
 
-	    public void setDimensions(ArrayList<Integer> D) {
-			this.Dimensions=D;
-		}
-	    
-	    public ArrayList<Integer> getDimensions() {
-	    	return Dimensions;
-	    }
+	private ArrayList<Integer> Dimensions;
+
+	public void setDimensions(ArrayList<Integer> D) {
+		this.Dimensions=D;
+	}
+
+	public ArrayList<Integer> getDimensions() {
+		return Dimensions;
+	}
 
 	@SuppressWarnings("exports")
 	@Override
@@ -43,7 +47,7 @@ public class Line extends Shape {
 	public Color getColor() {
 		return color;
 	}
-/*
+	/*
 	public void accept(ModifyingVisitorImp visitor)  {
 		visitor.visit(this,this.color);
 	}*/

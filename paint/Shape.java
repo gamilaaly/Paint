@@ -7,6 +7,8 @@ import javafx.scene.canvas.*;
 
 public abstract class Shape implements Cloneable {
 	protected String type;
+	protected boolean Original;
+	abstract boolean isOriginal();
 	abstract void draw(GraphicsContext g, Color c);
 	abstract void setColor(Color c);
 	abstract Color getColor();
@@ -24,6 +26,8 @@ public abstract class Shape implements Cloneable {
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
 		}
+		Shape c= (Shape)clone;
+		c.Original=false;
 		return clone;
 	}
 

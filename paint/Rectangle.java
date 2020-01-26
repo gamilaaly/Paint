@@ -22,6 +22,10 @@ public class Rectangle extends Shape {
 	
 	public Rectangle() {
 		type="Rectangle";
+		Original=true;
+	}
+	public boolean isOriginal() {
+	return Original;	
 	}
 
 
@@ -49,4 +53,7 @@ public class Rectangle extends Shape {
 	public void accept(ModifyingVisitorImp visitor)  {
 		visitor.visit(this,this.color);
 	}*/
+	
+	
+
 }

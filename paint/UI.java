@@ -25,7 +25,7 @@ public class UI extends Application {
 		// Set the height of the Canvas
 		canvas.setHeight(400);
 		
-		// Get the graphics context of the canva
+		// Get the graphics context of the canvas
 		GraphicsContext gc = canvas.getGraphicsContext2D();
 		Shape shape2 = ShapeFactory.getShape("TRIANGLE");
 		Shape shape1 = ShapeFactory.getShape("LINE");
@@ -56,6 +56,19 @@ public class UI extends Application {
 		//Visitor.visit(shape2,Color.BLACK,gc);
 		Shape shape3=(Shape)shape2.clone();
 	    shape3.draw(gc, Color.RED);
+	    
+	    //Copying Rectangle
+	    System.out.println(rectangle.isOriginal());
+	    Shape rectangle2=(Shape)rectangle.clone();
+	    System.out.println(rectangle2.isOriginal());
+        if(!rectangle2.isOriginal()) {
+        	ArrayList<Integer> dim=new ArrayList<Integer>();
+        	dim=rectangle2.getDimensions();
+        	rectangle2.setDimensions(new ArrayList<Integer>(Arrays.asList(dim.get(0)+30,dim.get(1)+20,100,70)));
+    		rectangle2.draw(gc, Color.RED);
+        }
+	    
+	    
 	    
 		
 		

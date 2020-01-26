@@ -9,29 +9,33 @@ public class Triangle extends Shape {
 	// Same exact functions as rectangle but with making height = width, make the GUI take take 1 parameter to be more realistic
 	public Triangle() {
 		type="Square";	
+		Original=true;
+	}
+	public boolean isOriginal() {
+		return Original;	
 	}
 
 	private Color color;
-    private ArrayList<Integer> Dimensions;
+	private ArrayList<Integer> Dimensions;
 
-    public void setDimensions(ArrayList<Integer> D) {
+	public void setDimensions(ArrayList<Integer> D) {
 		this.Dimensions=D;
 	}
-    
-    public ArrayList<Integer> getDimensions() {
-    	return Dimensions;
-    }
-	
-	
+
+	public ArrayList<Integer> getDimensions() {
+		return Dimensions;
+	}
+
+
 	@Override
 	void draw(GraphicsContext g, Color c) {
 		//g.fillPolygon(new double[]{getX1(), getX2(),getX3()},
 		//       new double[]{ getY1(), getY2(), getY3()}, 3);
 		g.setFill(c);
 		//g.fillPolygon(new double[]{90, 190 ,10},
-			//	new double[]{ 30,170,170}, 3);
+		//	new double[]{ 30,170,170}, 3);
 		g.fillPolygon(new double[]{this.Dimensions.get(0), this.Dimensions.get(1),this.Dimensions.get(2)},
-				     new double[]{ this.Dimensions.get(3), this.Dimensions.get(4), this.Dimensions.get(5)}, 3);
+				new double[]{ this.Dimensions.get(3), this.Dimensions.get(4), this.Dimensions.get(5)}, 3);
 	}
 
 	/*
@@ -54,5 +58,5 @@ public class Triangle extends Shape {
 		return color;
 	}
 
-	
+
 }

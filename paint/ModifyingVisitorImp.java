@@ -8,7 +8,7 @@ public class ModifyingVisitorImp implements ModifyingVisitor {
 	{
 		//System.out.println(shape.getType());
 		shape.draw(g, c);
-
+        //shape.Original=false;
 		
 	}
 }
