@@ -12,6 +12,7 @@ public abstract class Shape implements Cloneable {
     abstract void draw(GraphicsContext g, Color c);
     abstract void setColor(Color c);
     abstract Color getColor();
+    public abstract Boolean contains(double x, double y);
     //abstract void accept (ModifyingVisitorImp visitor);
     //DIMENSIONS
     abstract void setDimensions(ArrayList<Double> Dimensions);

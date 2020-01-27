@@ -66,9 +66,12 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
+                  <Button fx:id="selectBtn" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#selectBtnAction" prefHeight="30.0" prefWidth="30.0">
                      <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@cursor.png" />
+                           </image></ImageView>
                      </graphic>
                   </Button>
                   <Button maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
@@ -222,7 +225,7 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </BorderPane.margin>
          <children>
-            <Canvas fx:id="canvas" height="286.0" onDragDetected="#onDragDetected" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" onMouseReleased="#onMouseReleased" width="470.0">
+            <Canvas fx:id="canvas" height="286.0" onDragDetected="#onDragDetected" onKeyTyped="#onKeyTyped" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" onMouseReleased="#onMouseReleased" width="470.0">
                <cursor>
                   <Cursor fx:constant="CROSSHAIR" />
                </cursor></Canvas>

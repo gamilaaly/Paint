@@ -18,7 +18,7 @@ public class Square extends Shape {
 	private ArrayList<Double> Dimensions;
 
 	public void setDimensions(ArrayList<Double> D) {
-		this.Dimensions=D;
+		this.Dimensions= (ArrayList<Double>) D.clone();
 	}
 
 	public ArrayList<Double> getDimensions() {
@@ -33,6 +33,11 @@ public class Square extends Shape {
 		//g.fillRect(getX(), getY(), getHeight(), getWidth());
 		g.fillRect(this.Dimensions.get(0),this.Dimensions.get(1) ,this.Dimensions.get(2), this.Dimensions.get(2));
 
+	}
+
+	@Override
+	public Boolean contains(double x, double y) {
+		return x > Dimensions.get(0) && (x - Dimensions.get(0)) < Dimensions.get(3) && y > Dimensions.get(1) && (y - Dimensions.get(1) < Dimensions.get(2));
 	}
 
 	@SuppressWarnings("exports")

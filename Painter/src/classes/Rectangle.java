@@ -11,7 +11,7 @@ public class Rectangle extends Shape {
     private ArrayList<Double> Dimensions;
 
     public void setDimensions(ArrayList<Double> D) {
-        this.Dimensions = D;
+        this.Dimensions = (ArrayList<Double>) D.clone();
     }
 
     public ArrayList<Double> getDimensions() {
@@ -48,6 +48,11 @@ public class Rectangle extends Shape {
     @Override
     public Color getColor() {
         return this.color;
+    }
+
+    @Override
+    public Boolean contains(double x, double y) {
+        return x > Dimensions.get(0) && (x - Dimensions.get(0)) < Dimensions.get(3) && y > Dimensions.get(1) && (y - Dimensions.get(1) < Dimensions.get(2));
     }
 }
 	/*

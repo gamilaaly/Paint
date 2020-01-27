@@ -19,7 +19,7 @@ public class Circle extends Shape {
 	private ArrayList<Double> Dimensions;
 
 	public void setDimensions(ArrayList<Double> D) {
-		this.Dimensions=D;
+		this.Dimensions= (ArrayList<Double>) D.clone();
 	}
 
 	public ArrayList<Double> getDimensions() {
@@ -48,6 +48,11 @@ public class Circle extends Shape {
 	@SuppressWarnings("exports")
 	public Color getColor() {
 		return colour;
+	}
+
+	@Override
+	public Boolean contains(double x, double y) {
+		return null;
 	}
 	/*
    @Override

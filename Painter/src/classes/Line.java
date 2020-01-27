@@ -18,7 +18,7 @@ public class Line extends Shape {
 	private ArrayList<Double> Dimensions;
 
 	public void setDimensions(ArrayList<Double> D) {
-		this.Dimensions=D;
+		this.Dimensions= (ArrayList<Double>) D.clone();
 	}
 
 	public ArrayList<Double> getDimensions() {
@@ -45,6 +45,11 @@ public class Line extends Shape {
 	@Override
 	public Color getColor() {
 		return color;
+	}
+
+	@Override
+	public Boolean contains(double x, double y) {
+		return null;
 	}
 	/*
 	public void accept(ModifyingVisitorImp visitor)  {
