@@ -15,13 +15,13 @@ public class Line extends Shape {
 	}
 	private Color color;
 
-	private ArrayList<Integer> Dimensions;
+	private ArrayList<Double> Dimensions;
 
-	public void setDimensions(ArrayList<Integer> D) {
+	public void setDimensions(ArrayList<Double> D) {
 		this.Dimensions=D;
 	}
 
-	public ArrayList<Integer> getDimensions() {
+	public ArrayList<Double> getDimensions() {
 		return Dimensions;
 	}
 
@@ -32,7 +32,6 @@ public class Line extends Shape {
 		//g.strokeLine(getX1(), getY1(), getX2(), getY2());
 		g.strokeLine(this.Dimensions.get(0), this.Dimensions.get(1), this.Dimensions.get(2), this.Dimensions.get(3));
 
-		System.out.println("Inside Line::draw() method.");
 	}
 
 	@SuppressWarnings("exports")

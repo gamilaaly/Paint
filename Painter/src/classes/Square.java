@@ -15,13 +15,13 @@ public class Square extends Shape {
 		return Original;	
 	}
 	private Color color;
-	private ArrayList<Integer> Dimensions;
+	private ArrayList<Double> Dimensions;
 
-	public void setDimensions(ArrayList<Integer> D) {
+	public void setDimensions(ArrayList<Double> D) {
 		this.Dimensions=D;
 	}
 
-	public ArrayList<Integer> getDimensions() {
+	public ArrayList<Double> getDimensions() {
 		return Dimensions;
 	}
 
@@ -33,7 +33,6 @@ public class Square extends Shape {
 		//g.fillRect(getX(), getY(), getHeight(), getWidth());
 		g.fillRect(this.Dimensions.get(0),this.Dimensions.get(1) ,this.Dimensions.get(2), this.Dimensions.get(2));
 
-		System.out.println("Inside Square::draw() method");
 	}
 
 	@SuppressWarnings("exports")

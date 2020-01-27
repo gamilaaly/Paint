@@ -8,13 +8,13 @@ import javafx.scene.paint.Color;
 public class Rectangle extends Shape {
     private Color color;
 
-    private ArrayList<Integer> Dimensions;
+    private ArrayList<Double> Dimensions;
 
-    public void setDimensions(ArrayList<Integer> D) {
+    public void setDimensions(ArrayList<Double> D) {
         this.Dimensions = D;
     }
 
-    public ArrayList<Integer> getDimensions() {
+    public ArrayList<Double> getDimensions() {
         return Dimensions;
     }
 

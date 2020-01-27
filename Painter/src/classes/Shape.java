@@ -14,8 +14,8 @@ public abstract class Shape implements Cloneable {
     abstract Color getColor();
     //abstract void accept (ModifyingVisitorImp visitor);
     //DIMENSIONS
-    abstract void setDimensions(ArrayList<Integer> Dimensions);
-    abstract ArrayList<Integer> getDimensions();
+    abstract void setDimensions(ArrayList<Double> Dimensions);
+    abstract ArrayList<Double> getDimensions();
     public String getType(){
         return type;
     }

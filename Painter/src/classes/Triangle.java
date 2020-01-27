@@ -16,19 +16,19 @@ public class Triangle extends Shape {
 	}
 
 	private Color color;
-	private ArrayList<Integer> Dimensions;
+	private ArrayList<Double> Dimensions;
 
-	public void setDimensions(ArrayList<Integer> D) {
+	public void setDimensions(ArrayList<Double> D) {
 		this.Dimensions=D;
 	}
 
-	public ArrayList<Integer> getDimensions() {
+	public ArrayList<Double> getDimensions() {
 		return Dimensions;
 	}
 
 
 	@Override
-	void draw(GraphicsContext g, Color c) {
+	public void draw(GraphicsContext g, Color c) {
 		//g.fillPolygon(new double[]{getX1(), getX2(),getX3()},
 		//       new double[]{ getY1(), getY2(), getY3()}, 3);
 		g.setFill(c);

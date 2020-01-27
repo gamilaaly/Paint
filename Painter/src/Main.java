@@ -21,7 +21,7 @@ public class Main extends Application {
 
     public void decorate(Stage stage){
         stage.setTitle("Painter");
-        stage.setWidth(500);
-        stage.setHeight(500);
+        stage.setWidth(1920);
+        stage.setHeight(1080);
     }
 }
