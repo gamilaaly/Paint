@@ -1,4 +1,5 @@
-package classes;
+package controllers;
+
 
 
 import java.util.ArrayList;
@@ -29,22 +30,12 @@ public class Triangle extends Shape {
 
 	@Override
 	public void draw(GraphicsContext g, Color c) {
-		//g.fillPolygon(new double[]{getX1(), getX2(),getX3()},
-		//       new double[]{ getY1(), getY2(), getY3()}, 3);
 		g.setFill(c);
-		//g.fillPolygon(new double[]{90, 190 ,10},
-		//	new double[]{ 30,170,170}, 3);
+
 		g.fillPolygon(new double[]{this.Dimensions.get(0), this.Dimensions.get(1),this.Dimensions.get(2)},
 				new double[]{ this.Dimensions.get(3), this.Dimensions.get(4), this.Dimensions.get(5)}, 3);
 	}
 
-	/*
-		@Override
-		void accept(ModifyingVisitorImp visitor) {
-			visitor.visit(this,this.color);
-
-		}
-	 */	
 	@SuppressWarnings("exports")
 	public void setColor(Color c) {
 		this.color = c;
@@ -59,8 +50,10 @@ public class Triangle extends Shape {
 	}
 
 	@Override
-	public Boolean contains(double x, double y) {
+	public Boolean contains(double x, double y)
+	{
 		return null;
+
 	}
 
 

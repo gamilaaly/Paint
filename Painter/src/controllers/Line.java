@@ -1,21 +1,21 @@
-package classes;
+package controllers;
 
 
 import java.util.ArrayList;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-public class Circle extends Shape {
-	public Circle() {
-		//Checking purposes
-		type="Circle";
+
+public class Line extends Shape {
+	public Line() {
+		type="Line";
 		Original=true;
 	}
 	public boolean isOriginal() {
 		return Original;	
 	}
+	private Color color;
 
-	private Color colour;
 	private ArrayList<Double> Dimensions;
 
 	public void setDimensions(ArrayList<Double> D) {
@@ -26,37 +26,34 @@ public class Circle extends Shape {
 		return Dimensions;
 	}
 
-
-
 	@SuppressWarnings("exports")
 	@Override
 	public void draw(GraphicsContext g, Color c) {
 		g.setFill(c);
-		//g.fillOval(getX(), getY(), getHeight(), getWidth());
-		g.fillOval(this.Dimensions.get(0),this.Dimensions.get(1),this.Dimensions.get(2),this.Dimensions.get(2));
+		//g.strokeLine(getX1(), getY1(), getX2(), getY2());
+		g.strokeLine(this.Dimensions.get(0), this.Dimensions.get(1), this.Dimensions.get(2), this.Dimensions.get(3));
+
 	}
 
-
 	@SuppressWarnings("exports")
+	@Override
 	public void setColor(Color c) {
-		this.colour = c;
-		//checking
-		System.out.println("Color has changed");
+		this.color = c;
+		System.out.println("color has changed");
 	}
 
-
 	@SuppressWarnings("exports")
+	@Override
 	public Color getColor() {
-		return colour;
+		return color;
 	}
 
 	@Override
-	public Boolean contains(double x, double y) {
+	public Boolean contains(double x, double y)
+	{
 		return null;
+
 	}
-	/*
-   @Override
-	public void accept(ModifyingVisitorImp visitor)  {
-		visitor.visit(this,this.colour);
-	}*/
+
+
 }

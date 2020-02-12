@@ -1,6 +1,6 @@
-package classes;
+package controllers;
 
-public class ShapeFactory{
+public abstract class ShapeFactory{
 
 	public static Shape getShape(String shapeType) {
 		if (shapeType == null) {

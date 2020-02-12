@@ -1,4 +1,5 @@
-package classes;
+package controllers;
+
 
 import java.util.ArrayList;
 
@@ -33,7 +34,6 @@ public class Rectangle extends Shape {
     @Override
     public void draw(GraphicsContext g, Color c) {
         g.setFill(c);
-        //g.fillRect(getX(), getY(), getHeight(), getWidth());
         g.fillRect(this.Dimensions.get(0), this.Dimensions.get(1), this.Dimensions.get(2), this.Dimensions.get(3));
 
     }
@@ -51,12 +51,11 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public Boolean contains(double x, double y) {
+    public Boolean contains(double x, double y)
+    {
         return x > Dimensions.get(0) && (x - Dimensions.get(0)) < Dimensions.get(3) && y > Dimensions.get(1) && (y - Dimensions.get(1) < Dimensions.get(2));
+
     }
 }
-	/*
-	public void accept(ModifyingVisitorImp visitor)  {
-		visitor.visit(this,this.color);
-	}*/
+
 
